@@ -1,25 +1,37 @@
 import React from "react";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
-
 //create your first component
-const Home = () => {
-	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
+const Home = (props) => {
+	
+  return (
+		<>
+    <div className="row bg-info d-flex justify-content-center text-center mt-5">
+        <div className="col-12">SIMPLE COUNTER WITH REACT</div>
+      </div>
+		<div className="container bg-info d-flex justify-content-center mt-1">
+      
+      <div className="row">
+        <div className="col">
+		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-stopwatch" viewBox="0 0 16 16">
+  <path d="M8.5 5.6a.5.5 0 1 0-1 0v2.9h-3a.5.5 0 0 0 0 1H8a.5.5 0 0 0 .5-.5V5.6z"/>
+  <path d="M6.5 1A.5.5 0 0 1 7 .5h2a.5.5 0 0 1 0 1v.57c1.36.196 2.594.78 3.584 1.64a.715.715 0 0 1 .012-.013l.354-.354-.354-.353a.5.5 0 0 1 .707-.708l1.414 1.415a.5.5 0 1 1-.707.707l-.353-.354-.354.354a.512.512 0 0 1-.013.012A7 7 0 1 1 7 2.071V1.5a.5.5 0 0 1-.5-.5zM8 3a6 6 0 1 0 .001 12A6 6 0 0 0 8 3z"/>
+</svg>
+       </div>
+        <div className="col">
+          {props.digits.digitFour}
+        </div>
+        <div className="col">
+          {props.digits.digitThree}
+        </div>
+        <div className="col">
+          {props.digits.digitTwo}
+        </div>
+        <div className="col">
+          {props.digits.digitOne}
+        </div>
+      </div>
+    </div>
+		</>
 	);
 };
 
